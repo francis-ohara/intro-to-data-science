@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="notebook://C:/Users/franc/PycharmProjects/intro-to-data-science/notebooks/4-exercise.ipynb" dialect="GenericSQL" />
+    <file url="notebook://C:/Users/franc/pycharmProjects/intro-to-data-science/notebooks/4-pandas-exercise.ipynb" dialect="GenericSQL" />
     <file url="PROJECT" dialect="SQLite" />
   </component>
 </project>
