@@ -47,5 +47,34 @@ import matplotlib
 #
 # plt.plot([1,2,3,4,5], [6, 19, 29, 45, 23])
 # plt.show()
-print(type(matplotlib.style.available))
+# print(type(matplotlib.style.available))
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+temperatures = [37, 28, 33, 35, 18, 9, 89, 34, -12, 40]
+
+# calculating percentiles
+percentile10 = np.percentile(temperatures, 10)
+percentile90 = np.percentile(temperatures, 90)
+
+# box plot before imputation
+plt.boxplot(temperatures, vert=False)
+plt.title("Before Imputation")
+plt.show()
+
+
+# imputing outliers
+for i in range(len(temperatures)):
+    if temperatures[i] < percentile10:
+        temperatures[i] = percentile10
+    elif temperatures[i] > percentile90:
+        temperatures[i] = percentile90
+    i+= 1
+
+
+
+# box plot after imputation
+plt.boxplot(temperatures, vert=False)
+plt.title("After Imputation")
+plt.show()
